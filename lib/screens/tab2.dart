@@ -4,7 +4,10 @@ class Tab2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('TAB 2'),
+      child: Text(
+        'TAB 2',
+        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+      ),
     );
   }
 }

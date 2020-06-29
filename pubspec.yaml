@@ -28,6 +28,10 @@ dependencies:
   json_annotation: ^2.0.0 
   curved_navigation_bar: ^0.3.2
 
+  rect_getter: ^0.0.1
+  division: ^0.8.8
+  flutter_hooks: ^0.9.0
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

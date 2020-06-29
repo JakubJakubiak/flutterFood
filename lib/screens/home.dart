@@ -8,8 +8,6 @@ class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _Home();
-    
-    
   }
 }
 
@@ -49,11 +47,11 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
+      appBar: AppBar(
         title: Text('Startup Name Generator'),
-        actions: <Widget>[      
-          IconButton(icon: Icon(Icons.list), onPressed: null),
-        ], 
+        actions: <Widget>[
+          // IconButton(icon: Icon(Icons.list), onPressed: null),
+        ],
       ),
       body: Container(
         color: Colors.white,
@@ -68,7 +66,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.blueAccent,
         height: 50,
-        animationDuration: Duration(milliseconds: 200),
+        animationDuration: Duration(milliseconds: 300),
         backgroundColor: Colors.white,
         animationCurve: Curves.elasticOut,
         buttonBackgroundColor: Colors.blueAccent,
