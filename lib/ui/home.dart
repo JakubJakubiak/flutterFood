@@ -8,6 +8,8 @@ class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _Home();
+    
+    
   }
 }
 
@@ -47,6 +49,12 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+            appBar: AppBar(
+        title: Text('Startup Name Generator'),
+        actions: <Widget>[      
+          IconButton(icon: Icon(Icons.list), onPressed: null),
+        ], 
+      ),
       body: Container(
         color: Colors.white,
         height: MediaQuery.of(context).size.height,
