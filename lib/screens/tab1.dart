@@ -21,10 +21,6 @@ class _ChooseLocationState extends State<Tab1> {
         body: Container(
             height: MediaQuery.of(context).size.height,
             child: Stack(children: <Widget>[
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
-                height: MediaQuery.of(context).size.height * 0.6,
-              ),
               HomePageBackground(
                 screenHeight: MediaQuery.of(context).size.height,
               ),
@@ -32,10 +28,11 @@ class _ChooseLocationState extends State<Tab1> {
                   itemCount: locations.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                        padding:
-                            const EdgeInsets.only(left: 10, right: 60, top: 10),
-                        child: Card(
-                            child: Container(
+                      padding:
+                          const EdgeInsets.only(left: 10, right: 60, top: 10),
+                      child: Card(
+                          child: Column(children: <Widget>[
+                        Container(
                           height: 100,
                           child: ListTile(
                             onTap: () => {
@@ -60,7 +57,9 @@ class _ChooseLocationState extends State<Tab1> {
                                     fontWeight: FontWeight.bold, fontSize: 18)),
                             subtitle: Text(locations[index].description),
                           ),
-                        )));
+                        )
+                      ])),
+                    );
                   }),
             ])));
   }
@@ -72,7 +71,6 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(index);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey,

@@ -26,6 +26,7 @@ List<MenuFood> locations = [
         'Składniki 750 g filetu z łososia 3 łyżki musztardy Dijon 30 g skórki wieprzowej 2 łyżki stołowe parmezanu 16 łodyżek szparagówsól i pieprz',
   ),
   MenuFood(
+    id: 2,
     url:
         'https://ketowariatka.pl/wp-content/uploads/2020/01/keto-burgery-z-portobello.png',
     title: 'Keto burgery',
