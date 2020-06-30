@@ -4,10 +4,6 @@ import 'list/menuFood.dart';
 
 import 'background/home_page_background.dart';
 
-// @override
-//  Widget build(BuildContext context) {
-//    return new PlanetRow();
-
 class Tab1 extends StatefulWidget {
   @override
   _ChooseLocationState createState() => _ChooseLocationState();
@@ -23,56 +19,50 @@ class _ChooseLocationState extends State<Tab1> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            height: MediaQuery.of(context).size.height,
             child: Stack(children: <Widget>[
-      HomePageBackground(
-        screenHeight: MediaQuery.of(context).size.height,
-      ),
-      ListView.builder(
-          itemCount: locations.length,
-          itemBuilder: (context, index) {
-            return Padding(
-                padding: const EdgeInsets.only(left: 80.0, right: 40, top: 10),
-                child: Card(
-                  // child: Column(
-                  //    mainAxisAlignment: MainAxisAlignment.start,
-                  //    crossAxisAlignment: CrossAxisAlignment.start,
-                  //   children: [
-                    // elevation: 4,
-                    // color: Colors.blueGrey,
-                    child: ListTile(
-                      onTap: () => {
-                        Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) =>
-                                    DetailsScreen(index: index))),
-                      },
-                      leading: Hero(
-                          tag: locations[index].title,
-                          child: Column(children: <Widget>[
-                            ClipRRect(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)),
-                              child: Image.network(locations[index].url,
-                                fit: BoxFit.cover,
-                                height: 150, width: 150),
-                            )
-                          ])
-
-                          // child:CircleAvatar(
-                          //     backgroundImage: NetworkImage(locations[index].url))
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.height * 0.6,
+              ),
+              HomePageBackground(
+                screenHeight: MediaQuery.of(context).size.height,
+              ),
+              ListView.builder(
+                  itemCount: locations.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                        padding:
+                            const EdgeInsets.only(left: 10, right: 60, top: 10),
+                        child: Card(
+                            child: Container(
+                          height: 100,
+                          child: ListTile(
+                            onTap: () => {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) =>
+                                          DetailsScreen(index: index))),
+                            },
+                            leading: Container(
+                              width: 200,
+                              height: 300,
+                              child: Hero(
+                                tag: locations[index].id ??
+                                    locations[index].title,
+                                child: Image.network(locations[index].url,
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                            title: Text(locations[index].title,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18)),
+                            subtitle: Text(locations[index].description),
                           ),
-                      title: Text(locations[index].title,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18)),
-                      subtitle: Text(locations[index].description),
-                    ),
-                  // ]
-                  ),
-                // )
-                );
-          }),
-    ])));
+                        )));
+                  }),
+            ])));
   }
 }
 
@@ -85,23 +75,22 @@ class DetailsScreen extends StatelessWidget {
     print(index);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.blueGrey,
           title: Text(locations[index].title),
         ),
         body: Center(
             child: Container(
-          child: Hero(
-            tag: locations[index].title,
+                child: Stack(children: <Widget>[
+          HomePageBackground(
+            screenHeight: MediaQuery.of(context).size.height,
+          ),
+          Hero(
+            tag: locations[index].id ?? locations[index].title,
             child: ListView(children: [
               ClipRRect(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: const Radius.circular(800.0),
-                  bottomRight: const Radius.circular(200.0),
-                ),
+                borderRadius: BorderRadius.circular(25),
                 child: Image.network(
                   locations[index].url,
-                  //  width: MediaQuery.of(context).size.width,
-                  //  height: MediaQuery.of(context).size.height,
                   fit: BoxFit.fill,
                 ),
               ),
@@ -110,11 +99,18 @@ class DetailsScreen extends StatelessWidget {
                     padding: EdgeInsets.all(6.0),
                     child: Card(
                       child: Text(locations[index].description,
-                          style: TextStyle(fontSize: 18)),
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold)),
                     )),
+              ),
+              Container(
+                child: Card(
+                  child: Text(locations[index].fullDescription,
+                      style: TextStyle(fontSize: 18)),
+                ),
               )
             ]),
           ),
-        )));
+        ]))));
   }
 }

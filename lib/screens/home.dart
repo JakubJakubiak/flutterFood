@@ -47,12 +47,12 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Startup Name Generator'),
-        actions: <Widget>[
-          // IconButton(icon: Icon(Icons.list), onPressed: null),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text(''),
+      //   actions: <Widget>[
+      //     IconButton(icon: Icon(Icons.list), onPressed: null),
+      //   ],
+      // ),
       body: Container(
         color: Colors.white,
         height: MediaQuery.of(context).size.height,
@@ -64,12 +64,12 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
         ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.blueAccent,
+        color: Colors.blueGrey,
         height: 50,
-        animationDuration: Duration(milliseconds: 300),
-        backgroundColor: Colors.white,
+        animationDuration: Duration(milliseconds: 600),
+        backgroundColor: null,
         animationCurve: Curves.elasticOut,
-        buttonBackgroundColor: Colors.blueAccent,
+        buttonBackgroundColor: Colors.blueGrey,
         items: _iconList,
         onTap: (index) {
           setState(() {
