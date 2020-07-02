@@ -29,7 +29,7 @@ class _ChooseLocationState extends State<Tab1> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
-                          const EdgeInsets.only(left: 10, right: 60, top: 10),
+                          const EdgeInsets.only(left: 10, right: 10, top: 20),
                       child: Card(
                           child: Column(children: <Widget>[
                         GestureDetector(
@@ -42,12 +42,12 @@ class _ChooseLocationState extends State<Tab1> {
                                 },
                             child: Container(
                                 height: 200,
-                                child: ListView(children: [
+                                child: ListView(children: <Widget> [
                                   Hero(
                                     tag: locations[index].id,
                                     child: Image.network(locations[index].url,
                                         width: 100,
-                                        height: 100,
+                                        height: 120,
                                         fit: BoxFit.cover),
                                   ),
                                   ListTile(
@@ -105,7 +105,7 @@ class DetailsScreen extends StatelessWidget {
               Container(
                 child: Card(
                   child: Text(locations[index].fullDescription,
-                      style: TextStyle(fontSize: 18)),
+                      style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
                 ),
               )
             ]),
