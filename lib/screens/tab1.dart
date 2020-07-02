@@ -46,8 +46,7 @@ class _ChooseLocationState extends State<Tab1> {
                               width: 200,
                               height: 300,
                               child: Hero(
-                                tag: locations[index].id ??
-                                    locations[index].title,
+                                tag: locations[index].id,
                                 child: Image.network(locations[index].url,
                                     fit: BoxFit.cover),
                               ),
@@ -83,7 +82,7 @@ class DetailsScreen extends StatelessWidget {
             screenHeight: MediaQuery.of(context).size.height,
           ),
           Hero(
-            tag: locations[index].id ?? locations[index].title,
+            tag: locations[index].id,
             child: ListView(children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(25),
