@@ -45,4 +45,34 @@ List<MenuFood> locations = [
     fullDescription:
         'Składniki 800 g piersi z kurczaka 1/4 szklanki śmietanki 36% 1/4 szklanki startego parmezanu 2 łyżki masła 200 g cukinii pieprz i sól do smaku',
   ),
+  MenuFood(
+    id: 5,
+    url:
+        'https://ketowariatka.pl/wp-content/uploads/2020/05/losos-pieczony-ze-szparagami.png',
+    title: 'Łosoś pieczony ze szparagami',
+    description:
+        'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',
+    fullDescription:
+        'Składniki 750 g filetu z łososia 3 łyżki musztardy Dijon 30 g skórki wieprzowej 2 łyżki stołowe parmezanu 16 łodyżek szparagówsól i pieprz',
+  ),
+  MenuFood(
+    id: 6,
+    url:
+        'https://ketowariatka.pl/wp-content/uploads/2020/05/losos-pieczony-ze-szparagami.png',
+    title: 'Łosoś pieczony ze szparagami',
+    description:
+        'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',
+    fullDescription:
+        'Składniki 750 g filetu z łososia 3 łyżki musztardy Dijon 30 g skórki wieprzowej 2 łyżki stołowe parmezanu 16 łodyżek szparagówsól i pieprz',
+  ),
+  MenuFood(
+    id: 7,
+    url:
+        'https://ketowariatka.pl/wp-content/uploads/2020/05/losos-pieczony-ze-szparagami.png',
+    title: 'Łosoś pieczony ze szparagami',
+    description:
+        'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',
+    fullDescription:
+        'Składniki 750 g filetu z łososia 3 łyżki musztardy Dijon 30 g skórki wieprzowej 2 łyżki stołowe parmezanu 16 łodyżek szparagówsól i pieprz',
+  ),
 ];

@@ -32,31 +32,33 @@ class _ChooseLocationState extends State<Tab1> {
                           const EdgeInsets.only(left: 10, right: 60, top: 10),
                       child: Card(
                           child: Column(children: <Widget>[
-                        Container(
-                          height: 100,
-                          child: ListTile(
+                        GestureDetector(
                             onTap: () => {
-                              Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                      builder: (context) =>
-                                          DetailsScreen(index: index))),
-                            },
-                            leading: Container(
-                              width: 200,
-                              height: 300,
-                              child: Hero(
-                                tag: locations[index].id,
-                                child: Image.network(locations[index].url,
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                            title: Text(locations[index].title,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 18)),
-                            subtitle: Text(locations[index].description),
-                          ),
-                        )
+                                  Navigator.push(
+                                      context,
+                                      CupertinoPageRoute(
+                                          builder: (context) =>
+                                              DetailsScreen(index: index))),
+                                },
+                            child: Container(
+                                height: 200,
+                                child: ListView(children: [
+                                  Hero(
+                                    tag: locations[index].id,
+                                    child: Image.network(locations[index].url,
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover),
+                                  ),
+                                  ListTile(
+                                    title: Text(locations[index].title,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18)),
+                                    subtitle:
+                                        Text(locations[index].description),
+                                  ),
+                                ])))
                       ])),
                     );
                   }),
