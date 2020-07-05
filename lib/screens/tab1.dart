@@ -42,22 +42,25 @@ class _ChooseLocationState extends State<Tab1> {
                                 },
                             child: Container(
                                 height: 200,
-                                child: ListView(children: <Widget> [
+                                child: Stack(children: <Widget>[
                                   Hero(
                                     tag: locations[index].id,
                                     child: Image.network(locations[index].url,
-                                        width: 100,
+                                        width:
+                                            MediaQuery.of(context).size.width,
                                         height: 120,
                                         fit: BoxFit.cover),
                                   ),
-                                  ListTile(
-                                    title: Text(locations[index].title,
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18)),
-                                    subtitle:
-                                        Text(locations[index].description),
-                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(top: 120),
+                                      child: ListTile(
+                                        title: Text(locations[index].title,
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18)),
+                                        subtitle:
+                                            Text(locations[index].description),
+                                      )),
                                 ])))
                       ])),
                     );
