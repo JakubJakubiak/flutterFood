@@ -1,4 +1,4 @@
-package com.example.apkTestFunkcional
+package com.example.flutterFood
 
 import io.flutter.embedding.android.FlutterActivity
 
