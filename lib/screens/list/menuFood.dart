@@ -48,7 +48,7 @@ List<MenuFood> locations = [
   MenuFood(
     id: 5,
     url:
-        'https://ketowariatka.pl/wp-content/uploads/2020/05/losos-pieczony-ze-szparagami.png',
+        'https://pluspng.com/img-png/food-png-hd-download-png-image-food-png-hd-1134.png',
     title: 'Łosoś pieczony ze szparagami',
     description:
         'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',

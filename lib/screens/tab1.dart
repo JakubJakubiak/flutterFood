@@ -29,7 +29,7 @@ class _ChooseLocationState extends State<Tab1> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
-                          const EdgeInsets.only(left: 10, right: 10, top: 20),
+                          const EdgeInsets.only(left: 20, right: 20, top: 20),
                       child: Card(
                           child: Column(children: <Widget>[
                         GestureDetector(

@@ -32,6 +32,7 @@ dependencies:
   division: ^0.8.8
   flutter_hooks: ^0.10.0
   pub_semver: ^1.4.4
+  search_widget: ^1.0.2
   
 
 

@@ -20,7 +20,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
       color: Colors.white,
     ),
     Icon(
-      Icons.apps,
+      Icons.playlist_add,
       size: 30,
       color: Colors.white,
     ),
@@ -47,12 +47,6 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(''),
-      //   actions: <Widget>[
-      //     IconButton(icon: Icon(Icons.list), onPressed: null),
-      //   ],
-      // ),
       body: Container(
         color: Colors.white,
         height: MediaQuery.of(context).size.height,

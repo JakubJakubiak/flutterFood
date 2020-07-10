@@ -5,7 +5,7 @@ class Tab2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'TAB 2',
+        'list',
         style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
     );
