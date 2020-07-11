@@ -2,7 +2,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'tab1.dart';
 import 'tab2.dart';
-import 'tab3.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -12,15 +11,10 @@ class Home extends StatefulWidget {
 }
 
 class _Home extends State<Home> with SingleTickerProviderStateMixin {
-  List<Widget> _tabList = [Tab1(), Tab2(), Tab3()];
+  List<Widget> _tabList = [Tab1(), Tab2()];
   List<Widget> _iconList = [
     Icon(
       Icons.fastfood,
-      size: 30,
-      color: Colors.white,
-    ),
-    Icon(
-      Icons.playlist_add,
       size: 30,
       color: Colors.white,
     ),
