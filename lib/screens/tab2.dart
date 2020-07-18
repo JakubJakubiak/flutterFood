@@ -10,7 +10,7 @@ class Tab2 extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<Tab2> {
-  int index = 0;
+  int index = Random().nextInt(locations.length);
 
   void _initState() {
     setState(() {
@@ -20,13 +20,11 @@ class _ChooseLocationState extends State<Tab2> {
 
   @override
   Widget build(BuildContext context) {
-    print(index);
-
     return Scaffold(
         body: Container(
             height: 200,
             child: Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                 child: Card(
                     child: ListView(
                   children: [

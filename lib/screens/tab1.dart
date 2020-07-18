@@ -29,7 +29,7 @@ class _ChooseLocationState extends State<Tab1> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
-                          const EdgeInsets.only(left: 20, right: 20, top: 20),
+                          const EdgeInsets.only(left: 15, right: 15, top: 20),
                       child: Card(
                           child: Column(children: <Widget>[
                         GestureDetector(
@@ -45,7 +45,8 @@ class _ChooseLocationState extends State<Tab1> {
                                 child: Stack(children: <Widget>[
                                   Hero(
                                     tag: locations[index].id,
-                                    child: Image.network(locations[index].url,
+                                    child: Image.network(
+                                        locations[index].url ?? "",
                                         width:
                                             MediaQuery.of(context).size.width,
                                         height: 120,
@@ -54,12 +55,13 @@ class _ChooseLocationState extends State<Tab1> {
                                   Padding(
                                       padding: const EdgeInsets.only(top: 120),
                                       child: ListTile(
-                                        title: Text(locations[index].title,
+                                        title: Text(
+                                            locations[index].title ?? "",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18)),
-                                        subtitle:
-                                            Text(locations[index].description),
+                                        subtitle: Text(
+                                            locations[index].description ?? ""),
                                       )),
                                 ])))
                       ])),

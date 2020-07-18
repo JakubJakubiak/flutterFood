@@ -11,7 +11,7 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey,
-          title: Text(locations[index].title),
+          title: Text(locations[index].title ?? ""),
         ),
         body: Center(
             child: Container(
@@ -25,7 +25,7 @@ class DetailsScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: Image.network(
-                  locations[index].url,
+                  locations[index].url ?? "",
                   fit: BoxFit.fill,
                 ),
               ),
@@ -33,14 +33,14 @@ class DetailsScreen extends StatelessWidget {
                 child: Padding(
                     padding: EdgeInsets.all(6.0),
                     child: Card(
-                      child: Text(locations[index].description,
+                      child: Text(locations[index].description ?? "",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
                     )),
               ),
               Container(
                 child: Card(
-                  child: Text(locations[index].fullDescription,
+                  child: Text(locations[index].fullDescription ?? "",
                       style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
                 ),
               )
