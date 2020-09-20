@@ -19,7 +19,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
       color: Colors.white,
     ),
     Icon(
-      Icons.settings,
+      Icons.local_drink,
       size: 30,
       color: Colors.white,
     ),

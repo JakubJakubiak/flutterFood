@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'list/menuFood.dart';
-import 'list/DetailsScreen.dart';
+import 'list/detailsScreen.dart';
 import 'background/home_page_background.dart';
 
 class Tab1 extends StatefulWidget {
+  final String detal;
+  const Tab1({Key key, this.detal = 'locations'}) : super(key: key);
+
   @override
-  _ChooseLocationState createState() => _ChooseLocationState();
+  createState() => _ChooseLocationState();
 }
 
 class _ChooseLocationState extends State<Tab1> {
+  final detal = locations;
   @override
   void initState() {
     super.initState();
@@ -25,7 +29,7 @@ class _ChooseLocationState extends State<Tab1> {
                 screenHeight: MediaQuery.of(context).size.height,
               ),
               ListView.builder(
-                  itemCount: locations.length,
+                  itemCount: detal.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
@@ -37,16 +41,15 @@ class _ChooseLocationState extends State<Tab1> {
                                   Navigator.push(
                                       context,
                                       CupertinoPageRoute(
-                                          builder: (context) =>
-                                              DetailsScreen(index: index))),
+                                          builder: (context) => DetailsScreen(
+                                              index: index, detal: locations))),
                                 },
                             child: Container(
                                 height: 200,
                                 child: Stack(children: <Widget>[
                                   Hero(
-                                    tag: locations[index].id,
-                                    child: Image.network(
-                                        locations[index].url ?? "",
+                                    tag: detal[index].id,
+                                    child: Image.network(detal[index].url ?? "",
                                         width:
                                             MediaQuery.of(context).size.width,
                                         height: 120,
@@ -55,13 +58,12 @@ class _ChooseLocationState extends State<Tab1> {
                                   Padding(
                                       padding: const EdgeInsets.only(top: 120),
                                       child: ListTile(
-                                        title: Text(
-                                            locations[index].title ?? "",
+                                        title: Text(detal[index].title ?? "",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18)),
                                         subtitle: Text(
-                                            locations[index].description ?? ""),
+                                            detal[index].description ?? ""),
                                       )),
                                 ])))
                       ])),

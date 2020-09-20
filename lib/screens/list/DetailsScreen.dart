@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
 import 'menuFood.dart';
+import 'menuDrinking.dart';
+
 import '../background/home_page_background.dart';
 
 class DetailsScreen extends StatelessWidget {
   final int index;
-  const DetailsScreen({Key key, this.index}) : super(key: key);
+  final detal;
+  DetailsScreen({Key key, this.index, this.detal}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey,
-          title: Text(locations[index].title ?? ""),
+          title: Text(detal[index].title ?? ""),
         ),
         body: Center(
             child: Container(
                 child: Stack(children: <Widget>[
-          HomePageBackground(
-            screenHeight: MediaQuery.of(context).size.height,
-          ),
+          HomePageBackground(screenHeight: MediaQuery.of(context).size.height),
           Hero(
-            tag: locations[index].id,
+            tag: detal[index].id,
             child: ListView(children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: Image.network(
-                  locations[index].url ?? "",
+                  detal[index].url ?? "",
                   fit: BoxFit.fill,
                 ),
               ),
@@ -33,14 +34,14 @@ class DetailsScreen extends StatelessWidget {
                 child: Padding(
                     padding: EdgeInsets.all(6.0),
                     child: Card(
-                      child: Text(locations[index].description ?? "",
+                      child: Text(detal[index].description ?? "",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
                     )),
               ),
               Container(
                 child: Card(
-                  child: Text(locations[index].fullDescription ?? "",
+                  child: Text(detal[index].fullDescription ?? "",
                       style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
                 ),
               )
