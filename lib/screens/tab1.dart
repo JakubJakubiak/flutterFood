@@ -42,7 +42,7 @@ class _ChooseLocationState extends State<Tab1> {
                                       context,
                                       CupertinoPageRoute(
                                           builder: (context) => DetailsScreen(
-                                              index: index, detal: locations))),
+                                              index: index, detal: detal))),
                                 },
                             child: Container(
                                 height: 200,
@@ -65,7 +65,7 @@ class _ChooseLocationState extends State<Tab1> {
                                         subtitle: Text(
                                             detal[index].description ?? ""),
                                       )),
-                                ])))
+                                ]))),
                       ])),
                     );
                   }),

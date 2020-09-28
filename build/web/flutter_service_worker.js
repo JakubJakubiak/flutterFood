@@ -3,21 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "3d1055b9b92e31b8248e0b2c705b0dfc",
-"assets/assets/20190210_114048.jpg": "8471ce53e5905b42f5b450dafd470281",
-"assets/assets/20190405_114646.jpg": "a4839d5ca7f8186b30fd71ac593fe38d",
-"assets/assets/20190406_204841.jpg": "186d2a68221c8d3251a3bf921a7c1460",
-"assets/assets/20190420_112335.jpg": "6b663e1caa0f294dedb2f3410383a885",
-"assets/assets/20190424_131646.jpg": "cd03d4384c05b5b6e4d4c38339b29953",
-"assets/assets/20190518_115226.jpg": "c7f432ae51f010e58c0367c0fc5a7e60",
-"assets/assets/20200222_124936.jpg": "b232ebb93213617f27c7d95f72504ed2",
-"assets/assets/20200321_153323.jpg": "7262abf262f9411a2f84e10f88c76d1a",
-"assets/assets/20200419_121350.jpg": "224b8a7f538ba98c3b598e603dd3ee18",
-"assets/assets/cheese.jpg": "bc1df28af4f25fd240f8cf1697c6cfbb",
-"assets/assets/ketoScrambledEggs.jpg": "da2ad7bde1d197f777c73aea5030b34e",
-"assets/assets/riceWithVegetables.jpg": "e9e0979445c8d410569c90bc263633b8",
-"assets/assets/soyCutlet.jpg": "74504f84166679fd9568d64e96c86b92",
-"assets/assets/spinach.jpg": "08365496b5a5a3734f08458c3d2942b5",
+  "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
 "assets/NOTICES": "b3ccd96a2a542a8bc41feb30dbcb94f1",
@@ -27,7 +13,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "4f236a9b89470a6b9901c7741a897b52",
 "/": "4f236a9b89470a6b9901c7741a897b52",
-"main.dart.js": "6adf090eef5d4ce9e2614ed910872459",
+"main.dart.js": "6eed36b9b463a8dd5d25fc3c90b22a6d",
 "manifest.json": "68119fd18968fa09f2ffc95b54d79ef3"
 };
 

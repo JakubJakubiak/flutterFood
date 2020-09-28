@@ -41,6 +41,12 @@ class DetailsScreen extends StatelessWidget {
               ),
               Container(
                 child: Card(
+                  child: Text(detal[index].listDescription ?? "",
+                      style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
+                ),
+              ),
+              Container(
+                child: Card(
                   child: Text(detal[index].fullDescription ?? "",
                       style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
                 ),

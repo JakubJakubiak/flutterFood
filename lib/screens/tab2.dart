@@ -43,7 +43,7 @@ class _ChooseLocationState extends State<Tab2> {
                                       context,
                                       CupertinoPageRoute(
                                           builder: (context) => DetailsScreen(
-                                              index: index, detal: drinkings))),
+                                              index: index, detal: detal))),
                                 },
                             child: Container(
                                 height: 200,

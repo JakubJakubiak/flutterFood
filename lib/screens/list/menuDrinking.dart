@@ -1,15 +1,17 @@
 class MenuDrinking {
   int id;
+  String url;
   String title;
   String description;
-  String url;
+  String listDescription;
   String fullDescription;
 
   MenuDrinking({
     this.id,
+    this.url,
     this.title,
     this.description,
-    this.url,
+    this.listDescription,
     this.fullDescription,
   });
 }
@@ -17,19 +19,20 @@ class MenuDrinking {
 List<MenuDrinking> drinkings = [
   MenuDrinking(
     id: 0,
-    url: 'assets/20190406_204841.jpg',
-    title: 'picu picu ',
-    description:
-        'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',
-    fullDescription: 'Składniki 7',
+    url:
+        'https://ipfs.fleek.co/ipfs/QmaeiVKUQQhBAPyAMALL5dWr1C5271bNXWDmmxvuWPctYX/imageFood/20190406_204841.jpg',
+    title: 'Jogurt kiwi ',
+    description: 'Czas przygotowania: 10 minut',
+    listDescription: '150 g jogurtu naturalnego\n 1 kiwi',
+    fullDescription: 'Miksujemy i gotowe.',
   ),
   MenuDrinking(
     id: 1,
-    url: 'assets/20190424_131646.jpg',
-    title: 'Łosoś pieczony ze szparagami',
-    description:
-        'Czas przygotowania: 15 minut | Czas gotowania: 10 minut | Porcji: 2',
-    fullDescription:
-        'Składniki 750 g filetu z łososia 3 łyżki musztardy Dijon 30 g skórki wieprzowej 2 łyżki stołowe parmezanu 16 łodyżek szparagówsól i pieprz',
+    url:
+        'https://ipfs.fleek.co/ipfs/QmaeiVKUQQhBAPyAMALL5dWr1C5271bNXWDmmxvuWPctYX/imageFood/20190424_131646.jpg',
+    title: 'Jourt truskawkowy',
+    description: 'Czas przygotowania: 10 minut',
+    listDescription: 'truskawki 70 dag\n maślanka ok 700 ml\n cukier 2-3 łyżki',
+    fullDescription: 'Miksujemy i gotowe.',
   ),
 ];
