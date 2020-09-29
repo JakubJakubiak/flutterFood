@@ -16,43 +16,34 @@ class DetailsScreen extends StatelessWidget {
           backgroundColor: Colors.blueGrey,
           title: Text(detal[index].title ?? ""),
         ),
-        body: Center(
-            child: Container(
-                child: Stack(children: <Widget>[
+        body: Stack(children: <Widget>[
           HomePageBackground(screenHeight: MediaQuery.of(context).size.height),
-          Hero(
-            tag: detal[index].id,
-            child: ListView(children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.network(
-                  detal[index].url ?? "",
-                  fit: BoxFit.fill,
-                ),
-              ),
-              Container(
-                child: Padding(
-                    padding: EdgeInsets.all(6.0),
-                    child: Card(
-                      child: Text(detal[index].description ?? "",
+          ListView(children: [
+            Hero(
+                tag: detal[index].id,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: Image.network(
+                    detal[index].url ?? "",
+                    fit: BoxFit.fill,
+                  ),
+                )),
+            ClipRRect(
+                child: Container(
+                    color: Colors.blueGrey,
+                    child: Column(children: [
+                      Text('\n' + detal[index].description + '\n' ?? "",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
-                    )),
-              ),
-              Container(
-                child: Card(
-                  child: Text(detal[index].listDescription ?? "",
-                      style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
-                ),
-              ),
-              Container(
-                child: Card(
-                  child: Text(detal[index].fullDescription ?? "",
-                      style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
-                ),
-              )
-            ]),
-          ),
-        ]))));
+                      Text(detal[index].listDescription + '\n' ?? "",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Text(detal[index].fullDescription + '\n' ?? "",
+                          style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
+                    ]))),
+          ]),
+        ]));
   }
 }

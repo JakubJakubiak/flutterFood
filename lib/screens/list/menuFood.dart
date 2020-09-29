@@ -35,7 +35,7 @@ List<MenuFood> locations = [
     title: 'Jajak Sadzone',
     description: 'Czas przygotowania: 15 minut',
     listDescription: ' 3 jaka\n ziemniaki\n szczypiorek',
-    fullDescription: 'Jaka Płoszyc na oleju',
+    fullDescription: 'Jaka położyć na oleju',
   ),
   MenuFood(
     id: 2,
