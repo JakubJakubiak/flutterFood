@@ -32,10 +32,10 @@ List<MenuFood> locations = [
     id: 1,
     url:
         'https://ipfs.fleek.co/ipfs/QmaeiVKUQQhBAPyAMALL5dWr1C5271bNXWDmmxvuWPctYX/imageFood/20190420_112335.jpg',
-    title: 'Jajak Sadzone',
+    title: 'Jajka Sadzone',
     description: 'Czas przygotowania: 15 minut',
     listDescription: ' 3 jaka\n ziemniaki\n szczypiorek',
-    fullDescription: 'Jaka położyć na oleju',
+    fullDescription: 'Jajka położyć na oleju',
   ),
   MenuFood(
     id: 2,
@@ -56,13 +56,13 @@ List<MenuFood> locations = [
     description: 'Czas przygotowania: 5 minut',
     listDescription: 'sałata\n słonecznik\n papryka\n pomidor\n olej',
     fullDescription:
-        'Uprażyć słonecznik na oleju pokroić składnik wymiesza i zalać olejem.',
+        'Uprażyć słonecznik na oleju pokroić składnik wymieszać i zalać olejem.',
   ),
   MenuFood(
     id: 4,
     url:
         'https://ipfs.fleek.co/ipfs/QmaeiVKUQQhBAPyAMALL5dWr1C5271bNXWDmmxvuWPctYX/imageFood/20200321_153323.jpg',
-    title: 'Jajko z cukiniom',
+    title: 'Jajko z cukinią',
     description: 'Czas przygotowania: 15 minut',
     listDescription: ' jajako\n zemniaki\n olej\n cukinia',
     fullDescription:
@@ -94,7 +94,7 @@ List<MenuFood> locations = [
         'https://ipfs.fleek.co/ipfs/QmaeiVKUQQhBAPyAMALL5dWr1C5271bNXWDmmxvuWPctYX/imageFood/ketoScrambledEggs.jpg',
     title: 'Serowa jajecznica / Pyszna Świniatta',
     description:
-        'Czas przygotowania: 15 minut KCAL: 1918  B: 88,7  W: 8,3  T: 170',
+        'Czas przygotowania: 15 minut\nKCAL: 1918  B: 88,7  W: 8,3  T: 170',
     listDescription:
         ' 5 jaj\n 100g boczku\n 50g kabanosów\n 100g śmietany 30%\n 100g sera żółtego\n 20g masła klarowanego',
     fullDescription:

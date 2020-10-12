@@ -29,20 +29,23 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 )),
             ClipRRect(
-                child: Container(
-                    color: Colors.blueGrey,
-                    child: Column(children: [
-                      Text('\n' + detal[index].description + '\n' ?? "",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold)),
-                      Text(detal[index].listDescription + '\n' ?? "",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(detal[index].fullDescription + '\n' ?? "",
-                          style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
-                    ]))),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(90)),
+                child: Card(
+                    child: Container(
+                        child: Column(children: [
+                  Text('\n' + detal[index].description + '\n' ?? "",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      )),
+                  Text(detal[index].listDescription + '\n' ?? "",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      )),
+                  Text(detal[index].fullDescription + '\n' ?? "",
+                      style: TextStyle(fontSize: 18, letterSpacing: 1.0)),
+                ])))),
           ]),
         ]));
   }
